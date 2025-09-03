@@ -322,6 +322,14 @@ section.produtos > h1{
     background-color: #2382ee;
     height: 200px;
 }
+.rodpe > span {
+   display: flex;
+   justify-content: center;
+   padding-top: 90px;
+   font-family: Nunito;
+   font-size: 1.3rem;
+   color: aliceblue;
+}
 
 @media ( max-width: 500px ) { 
     .start{
