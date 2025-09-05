@@ -341,6 +341,7 @@ section.produtos > h1{
         
     }
     .title{
+        font-size: 1.9rem;
         text-align: center;
     }
     .sessao{
@@ -358,5 +359,22 @@ section.produtos > h1{
     }
     .texto{
         padding: 20px;
+    }
+    .produtos > h1{
+        text-align: center;
+    }
+    .type-prod{
+        gap: 4px;
+        margin:  0px 10px 0px 10px;
+    }
+    .produtos{
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .planos{
+        flex-wrap: wrap;
+        gap: 40px;
     }
   }
