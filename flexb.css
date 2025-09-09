@@ -330,6 +330,21 @@ section.produtos > h1{
    font-size: 1.3rem;
    color: aliceblue;
 }
+ .ham{
+    border: none;
+    background: none;
+    border-top: 3px solid whitesmoke;
+    cursor: pointer;
+}
+.ham::before,
+.ham::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: whitesmoke;
+    margin-top: 5px;
+}
 
 @media ( max-width: 500px ) { 
     .start{
