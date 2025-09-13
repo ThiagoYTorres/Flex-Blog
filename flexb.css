@@ -78,7 +78,7 @@ main{
     display: flex;
 }
 .sobre1{
-    width: 58%;
+    width: 50%;
     padding-bottom: 30px;
 }
 .sobre2{
@@ -228,14 +228,15 @@ section.produtos > h1{
     justify-content: center;
 }
 .caracteristicas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; 
-  justify-content: space-evenly;
-  width: 1400px;
-  margin-top: 100px;
- 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 100px;
+    
 }
 .caracteristicas > div > div > h1 {
     font-size: 1.6rem;
@@ -335,6 +336,9 @@ section.produtos > h1{
    font-size: 1.3rem;
    color: aliceblue;
 }
+.menu-mobile{
+        display: none;
+    }
  .ham{
     border: none;
     background: none;
@@ -350,19 +354,77 @@ section.produtos > h1{
     background: whitesmoke;
     margin-top: 5px;
 }
-
+.display{
+    display:none;
+}
+.abrirmenu{
+     animation: slideDaDireitaParaEsquerda 0.5s forwards;
+}
+.fecharmenu{
+    animation: slideDaEsquerdaParaDireita 0.5s forwards;
+}
+/* OUTRA FORMA DE CRIAR UM MENU HAMB
+    .ham{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    border: none;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    box-shadow: 0 9px whitesmoke, 0 -9px whitesmoke;
+}
+*/
+@keyframes slideDaEsquerdaParaDireita {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+ @keyframes slideDaDireitaParaEsquerda {
+        from { /* Ponto de partida: 100% à direita */
+            transform: translateX(100%);
+            opacity: 1;
+        }
+        to { /* Ponto de chegada: na posição original */
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 @media ( max-width: 1000px ) { 
     .start{
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
         padding: 20px;
+        width: 100%;
     }
     .ul-nav{
-        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-end;
+        padding: 1rem;
+        right: 0px;
+        top: 0px;
+        background-color:rgb(32, 129, 209);
+        z-index: 200;
+        margin-top: 3.5em;
+        padding-left: 9em;
+        padding-bottom: 2.5em;
         
+       
+    }
+    .ul-nav > li {
+        font-size: 2rem;
+        padding-right: 1em;
     }
     .title{
         font-size: 2.3rem;
         text-align: center;
+        padding: 20px 0px 20px 0px;
     }
     .texto {
         margin: 0 auto;
@@ -403,6 +465,12 @@ section.produtos > h1{
         flex-wrap: wrap;
         gap: 90px;
     }
+    .caracteristicas{
+        width: 100%;
+    }
+    .carac1{
+        width: 100%;
+    }
     .news-container{
         margin-top: 100px;
     }
@@ -423,6 +491,12 @@ section.produtos > h1{
     }
     .news-input{
         justify-content: center;
+    }
+    .menu-mobile{
+        display: block;
+        position: absolute;
+        padding-right: 20px;
+        right: 0;
     }
     html{
         font-size: 18px;
